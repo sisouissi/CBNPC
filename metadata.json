@@ -1,0 +1,5 @@
+{
+  "name": "CBNPC Aide Décision Dr. Souissi",
+  "description": "Application d'aide à la décision pour les modalités diagnostiques et thérapeutiques du cancer bronchique non à petites cellules (CBNPC), basée sur les Référentiels Auvergne Rhône-Alpes en oncologie thoracique 2025. Développée par Dr Zouhair Souissi.",
+  "requestFramePermissions": []
+}
