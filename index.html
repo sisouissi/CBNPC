@@ -1,99 +1,27 @@
-
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CBNPC Aide Décision</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              DEFAULT: '#0078D4', // Fluent Blue
-              light: '#EFF6FC',   // Light Blue for hovers/backgrounds
-              dark: '#005A9E',    // Darker Fluent Blue
-            },
-            accent: {
-              DEFAULT: '#107C10', // Fluent Green (alternative: '#008080' Teal)
-              dark: '#0B530B',    
-            },
-            neutral: {
-              background: '#F8F8F8', // Lightest Gray
-              surface: '#FFFFFF',     // White
-              border: '#E0E0E0',     // Light Gray border
-              strong: '#323130'      // Near Black for text
-            },
-            text: {
-              primary: '#323130',   // Near Black
-              secondary: '#605E5C', // Dark Gray
-              disabled: '#A19F9D',  // Medium Gray
-              onPrimary: '#FFFFFF', // White
-              error: '#A80000',     // Dark Red
-            },
-            status: {
-              error: '#D83B01',
-              errorBackground: '#FED9CC',
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
-          borderRadius: {
-            'md': '4px', // Fluent often uses 4px or 2px
-            'lg': '6px',
-          },
-          boxShadow: {
-            'md': '0 4px 8px 0 rgba(0,0,0,0.1)', // Fluent subtle shadow
-            'lg': '0 8px 16px 0 rgba(0,0,0,0.1)',
-          }
-        }
-      }
-    }
-  </script>
-  <link rel="preconnect" href="https://rsms.me/">
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <style>
-    body { 
-      font-family: 'Inter', sans-serif; 
-      background-color: tailwind.theme.colors.neutral.background; /* #F8F8F8 */
-      color: tailwind.theme.colors.text.primary; /* #323130 */
-    }
-    @supports (font-variation-settings: normal) {
-      body { font-family: 'Inter var', sans-serif; }
-    }
-    /* Custom scrollbar for a more Fluent feel */
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #c1c1c1; 
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #a1a1a1;
-    }
-  </style>
-<script type="importmap">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CBPC Decision Support Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importmap removed as esbuild now bundles dependencies -->
+  <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.1.0",
     "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "react/": "https://esm.sh/react@^19.1.0/"
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.511.0"
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body class="bg-neutral-background text-text-primary">
-  <div id="root"></div>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/bundle.js"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
-<link rel="stylesheet" href="index.css">
-<script src="index.tsx" type="module"></script>
